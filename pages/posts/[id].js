@@ -2,18 +2,21 @@ import Layout from '../../components/layout'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Head from 'next/head'
 import Date from '../../components/date'
-import utilStyles from '../../styles/utils.module.css'
+import styles from '../../styles/post.module.css'
 
 export default function Post({ postData }) {
   return (
-    <Layout>
-      {postData.title}
-      <br />
-      {postData.id}
-      <br />
-      {postData.date}
-      <br />
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+    <Layout className={styles.post}>
+      <Head>
+        <title>{postData.title}</title>
+      </Head>
+      <p className="text-center font-semibold text-xl">
+        {postData.title}
+      </p>
+      <p className="text-center text-xs mb-16">
+        {postData.date}
+      </p>
+      <div className={styles.content} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
     </Layout>
   )
 }

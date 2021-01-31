@@ -1,0 +1,28 @@
+.content > ol > li {
+	list-style: circle outside !important;
+}
+
+.content > ol {
+	display: block;
+	margin: 25px auto 25px 16px;
+}
+
+.content > h3 {
+	font-weight: 500;
+	margin: 25px auto;
+}
+
+.content > p > img {
+	margin: 15px auto 15px auto;
+}
+
+.content > pre {
+	width: auto;
+	overflow: auto;
+	margin: 15px 0px 15px 0;
+	background: #011627;
+	color: #FFFFFF;
+	border-radius: 10px;
+	padding: 8px;
+	font-size: 14px;
+}

@@ -1,14 +1,12 @@
 import Head from 'next/head'
 import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
-const name = 'Hi!'
-export const siteTitle = 'Next.js Sample Website'
+export const siteTitle = 'Home'
 
 export default function Layout({ children, home }) {
   return (
-    <div className={styles.container}>
+    <div className="max-w-xs sm:max-w-lg lg:max-w-xl mx-auto pb-20">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -24,48 +22,45 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
-        {home ? (
-          <>
-            <img
-              src="/images/profile.jpg"
-              className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <img
-                  src="/images/profile.jpg"
-                  className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2 className={utilStyles.headingLg}>
+      <div className="">
+        <header className={styles.header}>
+          {home ? (
+            <>
+              <img
+                src="/images/cat.png"
+                className={`${styles.headerImage} rounded-full mt-10`}
+                alt="profile pic"
+              />
+              <h2 className="my-6 text-lg font-bold">ようこそ, ロビ です</h2>
+            </>
+          ) : (
+            <>
               <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
+                <a>
+                  <img
+                    src="/images/cat.png"
+                    className={`${styles.headerImage} rounded-full my-10`}
+                    alt="poto profile"
+                  />
+                </a>
               </Link>
-            </h2>
-          </>
+            </>
+          )}
+        </header>
+        <main>
+
+        {children}
+
+
+        </main>
+        {!home && (
+          <div className={`${styles.backToHome}`}>
+            <Link href="/">
+              <a>← Back to home</a>
+            </Link>
+          </div>
         )}
-      </header>
-      <main>
-
-      {children}
-
-
-      </main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
-      )}
+      </div>
     </div>
   )
 }
