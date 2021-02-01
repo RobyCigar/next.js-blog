@@ -1,6 +1,7 @@
 ---
 title: 'Menggabungkan React dengan Leaflet js'
 date: '2020-12-01'
+desc: 'Belajar Leaflet js, library javascript untuk menampilkan peta pada website'
 ---
 Halo, disaat pandemi yang tak berujung ini Saya akan membagikan cara menggabungkan leafletjs di dalam aplikasi React anda.
 

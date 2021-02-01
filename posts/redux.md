@@ -1,6 +1,7 @@
 ---
 title: 'Data Flow pada Redux'
-date: '2020-01-01'
+date: '27-1-2021'
+desc: 'Belajar menggunakan Redux, state management untuk React'
 ---
 Ketika kita membuat aplikasi react biasa, yang terjadi dibalik layar adalah sebagai berikut:
 
