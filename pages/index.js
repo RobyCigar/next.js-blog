@@ -8,8 +8,6 @@ import styles from '../styles/home.module.css'
 
 
 export default function Home({allPostsData}) {
-
-
   return (
     <Layout home>
       <Head>
@@ -21,11 +19,11 @@ export default function Home({allPostsData}) {
         <ul>
           {allPostsData.map(({ id, date, title, desc }) => (
             <li key={id} className="mb-4">
-              <a href={`/posts/${id}`}>
-                <p className="text-xl">
+              <Link href={`/posts/${id}`}>
+                <p className="text-xl cursor-pointer">
                   {title}
                 </p>
-              </a>
+              </Link>
               <p>
                 {desc}
               </p>

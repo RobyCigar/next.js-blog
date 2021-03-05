@@ -3,6 +3,7 @@ import { getAllPostIds, getPostData } from '../../lib/posts'
 import Head from 'next/head'
 import Date from '../../components/date'
 import styles from '../../styles/post.module.css'
+import { useAppCtx } from '../../components/context/state'
 
 export default function Post({ postData }) {
   return (

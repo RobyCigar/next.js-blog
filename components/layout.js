@@ -3,17 +3,13 @@ import { useState } from 'react';
 import Head from 'next/head'
 import styles from './layout.module.css'
 import Link from 'next/link'
+import { useAppCtx } from './context/state'
 
 
 export const siteTitle = 'Home'
 
 export default function Layout({ children, home }) {
-
-  const [darkMode, setDarkMode] = useState(false)
-
-  const handleDark = () => {
-    setDarkMode(!darkMode)
-  }
+  const { darkMode, handleDarkMode } = useAppCtx()
 
   return (
   <div className={ darkMode ? "dark" : "null" }>
@@ -62,14 +58,17 @@ export default function Layout({ children, home }) {
           <main>
           <div className={styles.darkMode}>
             <DarkModeToggle
-              onChange={handleDark}
+              onChange={handleDarkMode}
               checked={darkMode}
               size={80}
               speed={2}
             />
           </div>
-    
-          {children}
+          
+
+          <div className="dark:text-blue-100 mx-6"> 
+            {children} {/* gk bisa jalan dark mode nya huhu :(*/}
+          </div>
 
 
           </main>
