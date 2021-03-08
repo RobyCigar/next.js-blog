@@ -1,3 +1,9 @@
+---
+title: 'GNU PSPP, Perangkat Lunak Gratis Alternatif SPSS dan Cara Instalasi PSPP '
+date: '2020-03-08'
+desc: 'Install PSPP, Download PSPP Gratis Linux Windows alternatif dari SPSS'
+---
+
 Jadi minggu kemarin saya mengikuti mata kuliah statistika praktikum, disitu saya disuruh oleh dosen saya untuk menggunakan software bernama SPSS untuk praktikum.
 
 Namun, software tersebut tidaklah free akan tetapi berbayar, karena waktu itu juga saya dipandu oleh asisten dosen kami sekelas pun dipandu untuk cara instalasinya, nah yang lucu disini adalah, kami, sekelas, diperintahkan untuk **membajak** software tersebut.
