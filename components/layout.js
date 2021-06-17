@@ -29,6 +29,19 @@ export default function Layout({ children, home }) {
           />
           <meta name="og:title" content={siteTitle} />
           <meta name="twitter:card" content="summary_large_image" />
+          <meta charset="utf-8" />
+          <link rel="icon" href="" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="theme-color" content="#000000" />
+          <meta
+            name="description"
+            content="Web site created using next js"
+          />
+          <link rel="apple-touch-icon" href="%PUBLIC_URL%/address-card.svg" />
+
+          <meta name="description" content="Portfolio Web Developer">
+          <meta name="keywords" content="HTML, CSS, JavaScript, React, Fullstack, React Native, Graphql, Developer, Software Engineer, Frontend, Backend">
+          <meta name="author" content="Rabih Utomo">        
         </Head>
         <div className="">
           <header className={styles.header}>
